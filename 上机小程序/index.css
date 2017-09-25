@@ -1,0 +1,43 @@
+#d1 {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #4199ee;
+}
+#d2 {
+    margin: 10px;
+    padding: 10px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid #4199ee;
+}
+#d0 {
+    display: flex;
+    flex-direction: row;
+    width: 550px;
+    justify-content: space-around;
+    margin: 0 auto;
+    border: 1px dotted #4199ee;
+}
+#fin {
+    margin-top: 20px;
+}
+#in,#in1,#in2 {
+    width: 120px;
+}
+#out {
+    margin-top: 20px;
+    width: 150px;
+    height: 80px;
+    border: 1px dotted #4199ee;
+}
+#out1 {
+    width: 150px;
+    height: 80px;
+    border: 1px dotted #4199ee;
+}
