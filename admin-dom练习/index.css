@@ -1,0 +1,91 @@
+body,html,ul, menu, dir{
+    margin: 0;
+    padding: 0;
+}
+#nav {
+    width: 100%;
+    height: 46px;
+    line-height: 46px;
+    background: #fff;
+    border-bottom: 1px solid #e9e9e9;
+
+}
+#con {
+    width: 100%;
+    height: 100%;
+}
+#nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: row;
+}
+#nav ul a {
+    text-align: center;
+    width: 160px;
+    height: 46px;
+    float: right;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.65);
+}
+#nav ul a:hover {
+    color: #108ee9;
+    border-bottom: 1px solid #108ee9;
+}
+#main {
+    display: flex;
+    flex-direction: row;
+
+}
+#left {
+    width: 210px;
+    height: 760px;
+    background: rgba(0, 0, 0, 0.15);
+    position: relative;
+}
+
+#lnav {
+    
+    background: #fcfcfc;
+    width: 180px;
+    height: 550px;
+    position: absolute;
+    top: 15px;
+    left: 15px;
+
+}
+ul {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+#lnav ul {
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#lnav a{
+    cursor: pointer;
+    padding-top: 8px;
+    display: inline-block;
+    text-align: center;
+    width: 120px;
+    height: 45px;
+    text-decoration: none;
+    color: rgba(0, 0, 0, 0.65);
+}
+#lnav ul a:hover {
+    color: #108ee9;
+}
+#right {
+    width: calc(100% - 210px);
+    height: 760px;
+    position: relative;
+}
+#s {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+}
