@@ -1,0 +1,292 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: Microsoft YaHei, sans-serif;
+}
+
+a {
+    color: #fff;
+    text-decoration: none;
+}
+
+ul,
+li {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+body {
+    min-width: 980px;
+    background: #e2e2e2;
+}
+
+/* header */
+.header {
+    position: relative;
+    width: 100%;
+    height: 80px;
+    background: #47456D;
+}
+
+.nav-wrap {
+    position: relative;
+    width: 980px;
+    height: 80px;
+    margin: 0 auto;
+}
+
+.logo {
+    position: absolute;
+    bottom: 5px;
+}
+
+.nav {
+    position: absolute;
+    bottom: 5px;
+    width: 100%;
+}
+
+.nav ul {
+    float: right;
+}
+
+.nav li {
+    float: left;
+    font: 14px SimSun, sans-serif;
+    margin-left: 28px;
+}
+
+.icon-github {
+    position: absolute;
+    right: 10px;
+    bottom: 0;
+}
+
+@media (max-width: 980px) {
+    .icon-github {
+        display: none;
+    }
+}
+
+/* taks0002_1 */
+.center {
+    margin: 0 auto;
+    width: 980px;
+}
+
+.center h2 {
+    margin: 20px 0;
+}
+
+.myTextArea {
+    width: 980px;
+    height: 200px;
+    padding: 8px;
+    font-size: 14px;
+    -webkit-border-radius: 4px;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-top-color: #c0c0c0;
+}
+
+.myTextArea:hover {
+    border: 1px solid #b9b9b9;
+    border-top-color: #a0a0a0;
+}
+
+.myTextArea:focus {
+    border: 1px solid #4d90fe;
+}
+
+.instruction {
+    color: #000;
+    font-size: 10px;
+}
+
+.deal {
+    margin: 10px 0 30px;
+    height: 28px;
+    position: relative;
+}
+
+.deal button {
+    float: left;
+    width: 100px;
+    height: 28px;
+    background-color: #fff;
+    border-radius: 6px;
+    color: #666;
+    padding: 6px 24px;
+    border: none;
+    outline: none;
+    margin-right: 10px;
+}
+.deal button:hover {
+    background-color:#f6f6f6;
+}
+.deal button:active {
+    position:relative;
+    top:1px;
+}
+
+.error {
+    position: absolute;
+    left: 300px;
+    line-height: 28px;
+    color: #f00;
+}
+
+.result h3 {
+    margin-bottom: 10px;
+}
+
+.reuslt {
+    word-spacing:25px;
+}
+
+/* task0002_2 */
+.myText {
+    width: 980px;
+    padding: 7px;
+    font-size: 16px;
+    outline: none;
+    background-color: #fff;
+    border: 1px solid #d9d9d9;
+    border-top-color: #c0c0c0;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.myText:hover {
+    border: 1px solid #b9b9b9;
+    border-top-color: #a0a0a0;
+}
+
+.myText:focus {
+    border: 1px solid #4d90fe;
+}
+
+/* task0002_3 */
+.container {
+    width: 600px;
+    height: 375px;
+    overflow: hidden;
+    position: relative;
+    border: 1px solid #000;
+}
+
+.list {
+    position: absolute;
+    width: 12000px;
+    z-index: 1;
+}
+
+.list img {
+    width: 600px;
+    float: left;
+}
+
+.button {
+    position: absolute;
+    bottom: 20px;
+    left: 250px;
+    z-index: 2;
+}
+
+.button li {
+    cursor: pointer;
+    float: left;
+    border: 1px solid #fff;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background: #333;
+    margin-right: 5px;
+}
+
+.button .light {
+    background: #0f0;
+}
+
+.arrow {
+    position: absolute;
+    cursor: pointer;
+    float: left;
+    width: 150px;
+    height: 375px;
+    z-index: 2;
+    color: #000;
+}
+
+#prev {
+    left: 0;
+}
+
+#next {
+    right: 0;
+}
+
+/* task0002_4 */
+.inputArea {
+    position: relative;
+}
+
+.prompt-wrap {
+    width: 980px;
+    position: absolute;
+    top: 31px;
+    background: #fff;
+    border: 1px solid #ccc;
+    border-top-color: #d9d9d9;
+    -webkit-box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+.prompt li {
+    line-height: 22px;
+    padding: 0 10px;
+    cursor: default;
+}
+
+.choose {
+    background: #eee;
+}
+
+/* task0002_5 */
+.drag-container {
+    height: 452px;
+    margin-top: 20px;
+}
+
+.drag-wrap {
+    width: 150px;
+    height: 450px;
+    background: #92C0EF;
+    margin-right: 160px;
+    float: left;
+    border: 1px solid #000;
+    position: relative;
+}
+
+.drag {
+    width: 150px;
+    height: 40px;
+    background: #47456D;
+    border: 1px solid #000;
+    margin: -1px;
+    color: #fff;
+    line-height: 40px;
+    text-align: center;
+    cursor: move;
+    position: absolute;
+    left: 0;
+}
+
+.dragging {
+    visibility: hidden;
+}
