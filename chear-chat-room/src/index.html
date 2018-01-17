@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>聆歌聊天室</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/DPlayer.min.css">
+</head>
+<body>
+    <div class="container">
+        <div id="box">
+            <input type="text" id="user" value="" placeholder="你的名字">
+            <input type="text" id="say" value="" placeholder="按下Enter发送消息">
+        </div>
+        <div id="chat"></div>
+    </div>
+    <div id="aplayer1" class="aplayer"></div>
+
+    <div id="dplayer"></div>
+
+    <script src="./js//APlayer.min.js"></script>
+    <script src="./js/DPlayer.min.js"></script>
+    <script src="http://localhost:3000/socket.io/socket.io.js"></script>
+    <script>
+        var ap = new APlayer({
+            element: document.getElementById('aplayer1'),
+            music: {
+                title: 'Preparation',
+                author: 'Hans Zimmer/Richard Harvey',
+                url: 'Preparation.mp3',
+            }
+        });
+        var dp = new DPlayer({
+            container: document.getElementById('dplayer'),
+            screenshot: true,
+            video: {
+                url: 'demo.mp4',
+                pic: 'demo.jpg',
+                thumbnails: 'thumbnails.jpg'
+            },
+            subtitle: {
+                url: 'webvtt.vtt'
+            },
+            danmaku: {
+                id: 'demo',
+                api: 'https://api.prprpr.me/dplayer/'
+            }
+        });
+        var socket = io('http://localhost:3000');
+        var mes = document.getElementById('chat');
+        var input = document.getElementById('say');
+        var user = document.getElementById('user');
+
+        function addMessage(message){
+            var newmes = document.createElement('div');
+            newmes.classList.add('message');
+            var text = document.createTextNode(message);
+            newmes.appendChild(text);
+            mes.appendChild(newmes);
+        }
+
+        socket.on('serverMessage' ,function(content){
+            //addMessage(content);
+            addMessage(content);
+        });
+        // socket.on('news', function (data) {
+        //     console.log(data);
+        //     socket.emit('my other event', { my: 'data' });
+        // });
+
+        input.onkeydown = function(keyboardEvent) {
+            if(keyboardEvent.keyCode ===  13){
+                socket.emit('clientMessage', input.value);
+                input.value = "";
+                return false;
+            }
+            else {
+                return true;
+            }
+        }
+
+        user.onblur = function() {
+            if(user.value != "")
+                socket.emit('name', user.value);
+        }
+    </script>
+</body>
+</html>
